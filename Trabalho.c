@@ -71,13 +71,13 @@ float converterPeso(float valor, char unidadeOrigem, char unidadeDestino) {
         case 'T':
             quilogramas = valor * 1000; // Toneladas métricas para quilogramas
             break;
-        case 'CT':
+        case 'K':
             quilogramas = valor / 5000; // Quilates para quilogramas
             break;
-        case 'GR':
+        case 'P':
             quilogramas = valor / 15432.4; // Grãos para quilogramas
             break;
-        case 'KN':
+        case 'B':
             quilogramas = valor / 0.00980665; // Quilonewtons para quilogramas
             break;
     }
@@ -97,13 +97,13 @@ float converterPeso(float valor, char unidadeOrigem, char unidadeDestino) {
         case 'T':
             resultado = quilogramas / 1000; // Quilogramas para toneladas métricas
             break;
-        case 'CT':
+        case 'K':
             resultado = quilogramas * 5000; // Quilogramas para quilates
             break;
-        case 'GR':
+        case 'P':
             resultado = quilogramas * 15432.4; // Quilogramas para grãos
             break;
-        case 'KN':
+        case 'B':
             resultado = quilogramas * 0.00980665; // Quilogramas para quilonewtons
             break;
     }
@@ -153,10 +153,15 @@ int main() {
         printf("Digite o valor a ser convertido: ");
         scanf("%f", &valor);
         char unidadeOrigem, unidadeDestino;
+        if(opcao==1){
         printf("SE A UNIDADE FOR COMPRIMENTO\nC para Centimetro\nK para Quilometro\nP para Polegadas\nM para Milimetros\nD para Decimetros\nJ para Jardas\nE para Pés\n+=================================+======================================+\n");
-        printf("SE A UNIDADE FOR PESO\nG para Gramas\nO para Onças\nL para Libras\nT para Toneladas Metricas\nCT para Quilates\nGR para grãos\nKn para quilonewtons\n+=================================+======================================+\n");
+        }
+        if(opcao==2){
+        printf("SE A UNIDADE FOR PESO\nG para Gramas\nO para Onças\nL para Libras\nT para Toneladas Metricas\nK para Quilates\nP para grãos\nB para quilonewtons\n+=================================+======================================+\n");
+        }
+        if(opcao==3){
         printf("SE A UNIDADE FOR TEMPERATURA\nK para Kelvin\nC para Celsius\nF para Fahrenheit\n+=================================+======================================+\n");
-        printf("Digite a unidade de origem :");
+        }printf("Digite a unidade de origem :");
         scanf(" %c", &unidadeOrigem);
         printf("Digite a unidade de destino:");
         scanf(" %c", &unidadeDestino);
@@ -184,3 +189,4 @@ int main() {
 
     return 0;
 }
+
