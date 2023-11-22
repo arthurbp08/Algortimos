@@ -1,3 +1,6 @@
+//FUNÇÃO
+
+
 /*Elabore uma função que receba três nnotas de um aluno como parâmetro e uma letra. Se a
 letra for ‘A’, a função deve calcular a média aritmética das notas do aluno; se a letra for ‘P’,
 deverá calcular a média ponderada, com pesos 5,3 e 2. Retorne a média calculada para o
